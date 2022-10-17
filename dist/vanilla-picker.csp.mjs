@@ -435,7 +435,7 @@ function dragTrack(eventBucket, area, callback) {
             w = bounds.width,
             h = bounds.height,
             x = info.clientX,
-            y = info.clientY;
+            y = info.clientY + 12;
 
         var relX = clamp(x - bounds.left, 0, w),
             relY = clamp(y - bounds.top, 0, h);
@@ -930,11 +930,13 @@ var Picker = function () {
             posX(uiH, thumbH, hsl[0]);
 
             this._domSL.style.backgroundColor = this._domH.style.color = cssHue;
+            thumbH.style.backgroundColor = cssHue;
 
             posX(uiSL, thumbSL, hsl[1]);
             posY(uiSL, thumbSL, 1 - hsl[2]);
 
             uiSL.style.color = cssHSL;
+            thumbSL.style.backgroundColor = cssHSL;
 
             posY(uiA, thumbA, 1 - hsl[3]);
 
