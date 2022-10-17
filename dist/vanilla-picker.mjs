@@ -2,7 +2,7 @@
  * vanilla-picker v2.12.1
  * https://vanilla-picker.js.org
  *
- * Copyright 2017-2021 Andreas Borgen (https://github.com/Sphinxxxx), Adam Brooks (https://github.com/dissimulate)
+ * Copyright 2017-2022 Andreas Borgen (https://github.com/Sphinxxxx), Adam Brooks (https://github.com/dissimulate)
  * Released under the ISC license.
  */
 var classCallCheck = function (instance, Constructor) {
@@ -720,7 +720,7 @@ var Picker = function () {
                 return toggled;
             }
 
-            var html = this.settings.template || '<div class="picker_wrapper" tabindex="-1"><div class="picker_arrow"></div><div class="picker_hue picker_slider"><div class="picker_selector"></div></div><div class="picker_sl"><div class="picker_selector"></div></div><div class="picker_alpha picker_slider"><div class="picker_selector"></div></div><div class="picker_editor"><input aria-label="Type a color name or hex value"/></div><div class="picker_sample"></div><div class="picker_done"><button>Ok</button></div><div class="picker_cancel"><button>Cancel</button></div></div>';
+            var html = this.settings.template || '<div class="picker_wrapper" tabindex="-1"><div class="picker_arrow"></div><div class="picker_hue picker_slider"><div class="picker_selector"></div></div><div class="picker_sl"><div class="picker_selector"></div></div><div class="picker_alpha picker_slider"><div class="picker_selector"></div></div><div class="picker_editor"><input aria-label="Type a color name or hex value"/></div></div>';
             var wrapper = parseHTML(html);
 
             this.domElement = wrapper;
@@ -852,7 +852,6 @@ var Picker = function () {
         value: function _setPosition() {
             var parent = this.settings.parent,
                 elm = this.domElement;
-
             if (parent !== elm.parentNode) {
                 parent.appendChild(elm);
             }
@@ -862,6 +861,8 @@ var Picker = function () {
                 if (getComputedStyle(parent).position === 'static') {
                     parent.style.position = 'relative';
                 }
+
+                console.log('TESTESTESTESTESETESTESTETSETEERERERE', popup);
 
                 var cssClass = popup === true ? 'popup_right' : 'popup_' + popup;
 

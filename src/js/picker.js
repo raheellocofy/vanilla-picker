@@ -511,7 +511,6 @@ class Picker {
     _setPosition() {
         const parent = this.settings.parent,
               elm = this.domElement;
-
         if(parent !== elm.parentNode) { parent.appendChild(elm); }
 
         this._ifPopup((popup) => {
@@ -520,6 +519,8 @@ class Picker {
             if(getComputedStyle(parent).position === 'static') {
                 parent.style.position = 'relative';
             }
+
+            console.log('TESTESTESTESTESETESTESTETSETEERERERE',popup)
 
             const cssClass = (popup === true) ? 'popup_right' : 'popup_' + popup;
 
