@@ -867,9 +867,6 @@
                   if (getComputedStyle(parent).position === 'static') {
                       parent.style.position = 'relative';
                   }
-
-                  console.log('TESTESTESTESTESETESTESTETSETEERERERE', popup);
-
                   var cssClass = popup === true ? 'popup_right' : 'popup_' + popup;
 
                   ['popup_top', 'popup_bottom', 'popup_left', 'popup_right'].forEach(function (c) {
