@@ -592,8 +592,7 @@ class Picker {
         
         //Use the fully saturated hue on the SL panel and Hue thumb:
         this._domSL.style.backgroundColor = this._domH.style.color = cssHue;
-
-
+        thumbH.style.backgroundColor = cssHue;
         /* S/L */
         
         posX(uiSL, thumbSL, hsl[1]);
@@ -601,7 +600,7 @@ class Picker {
         
         //Use the opaque HSL on the SL thumb:
         uiSL.style.color = cssHSL;
-
+        thumbSL.style.backgroundColor= cssHSL
 
         /* Alpha */
         
